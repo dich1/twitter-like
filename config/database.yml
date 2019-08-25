@@ -51,4 +51,4 @@ production:
   <<: *default
   database: <%= ENV['DB_DATABASE'] %>
   username: <%= ENV['DB_USERNAME'] %>
-  password: <%= ENV['TWITTER_LIKE_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
