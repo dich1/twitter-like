@@ -33,6 +33,14 @@ yarn-debug.log*
 .DS_Store
 .env
 log.txt
-log/
-test/
-vendor/bundle
+/test
+/vendor/bundle
+/.yardoc
+/doc/*
+bookshelf-classd.dot
+schema.html
+schema.xml
+/db/schema.rb
+.rspec
+/public/system
+/spec/tmp

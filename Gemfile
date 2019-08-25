@@ -29,9 +29,26 @@ gem 'active_model_serializers'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'kaminari'
+gem 'fog-aws'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'ransack'
+gem 'migration_comments'
+gem 'seed-fu'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rspec-rails', '~> 3.6'
+  gem 'factory_bot_rails'
+  gem 'database_cleaner'
+  gem 'rails-erd'
+  gem 'schemadoc'
+  gem 'yard'
+  gem 'hirb'
+  gem 'hirb-unicode'
 end
 
 group :development do
@@ -41,6 +58,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'dotenv-rails'
 end
 
 group :test do
