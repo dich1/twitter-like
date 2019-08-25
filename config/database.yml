@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV.fetch("DB_DATABASE") { twitter_like_production } %>
-  username: <%= ENV.fetch("DB_USERNAME") { twitter_like } %>
+  database: <%= ENV['DB_DATABASE'] %>
+  username: <%= ENV['DB_USERNAME'] %>
   password: <%= ENV['TWITTER_LIKE_DATABASE_PASSWORD'] %>
