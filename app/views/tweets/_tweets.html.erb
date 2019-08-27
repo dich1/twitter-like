@@ -1,0 +1,21 @@
+<ul class="list-unstyled">
+  <% tweets.each do |tweet| %>
+    <li class="media mb-3">
+      <img class="mr-2 rounded" src="<%= gravatar_url(tweet.user, { size: 50 }) %>" alt="">
+      <div class="media-body">
+        <div>
+          <%= link_to tweet.user.name, user_path(tweet.user) %> <span class="text-muted">posted at <%= tweet.created_at %></span>
+        </div>
+        <div>
+          <p><%= tweet.content %></p>
+        </div>
+        <div>
+          <% if current_user == tweet.user %>
+            <%= link_to "Delete", tweet, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-sm' %>
+          <% end %>
+        </div>
+      </div>
+    </li>
+  <% end %>
+  <%= paginate tweets %>
+</ul>
